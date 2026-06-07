@@ -1,0 +1,1134 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1f242d;
+    font-family: Arial, sans-serif;
+}
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    margin-left: auto;
+}
+
+/* NAVBAR CORRIGÉE */
+.navbar {
+    position: fixed;
+    top: 0; /* corrigé */
+    left: 0;
+    width: 100%;
+    padding: 20px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000; /* ajouté */
+    background: #1f242d; /* ajouté */
+}
+/* logo */
+.logo {
+    
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    animation: logoColor 4s infinite;
+}
+
+/* Animation  du logo*/
+@keyframes logoColor {
+    0%   { color: cyan; }
+    33%  { color: #00bcd4; }
+    66%  { color: #ff00ff; }
+    100% { color: cyan; }
+}
+.logo {
+    color: white;
+    font-size: 38px;
+    font-weight: bold;
+      text-decoration: none;  
+}
+
+
+/* Groupe gauche (logo + recherche) */
+.logo {
+    margin-right: 20px;
+}
+
+.recherche {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+/* Barre de recherche */
+.rechercher input {
+    width: 400px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+.rechercher button {
+    width: 45px;
+    height: 40px;
+    margin-left: 5px;
+    padding: 6px 10px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/* pour liens */
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hover */
+.navbar ul li a:hover {
+    color: cyan;
+}
+.navbar ul li{
+    list-style: none;
+    margin-left: 35px;
+}
+.navbar ul li a{
+    font-weight: 380;
+    font-size: 23px;
+    transition: .5s;
+}
+.navbar ul li a.active {
+    color: cyan; 
+    font-weight: bold;
+}
+.accueil{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 60px 9% 0;
+    color: #fff;
+}
+.accueil-info h1{
+    font-size: 55px;
+}
+.accueil-info h2{
+    font-size: 32px;
+    margin-top: 20px;
+    
+}
+.accueil-info p{
+    font-size: 26px;
+    margin: 10px 0 25px;
+    font-family: "Bitter", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.accueil-info .tel{
+    display: flex;
+    align-items: center;
+}
+.tel-cv{
+    margin-top: -7%;
+    font-size: 150%;
+    display: inline-block;
+    padding: 10px 30px;
+    background:cyan; 
+    border: 2px solid cyan;
+    border-radius: 40px;
+    box-shadow: 0 0 10px cyan;
+    color: #1f242d;
+    font-weight: 600;
+    transition: .5s;
+}
+.tel-cv:hover{
+background: transparent;
+color: aqua;
+box-shadow: none;
+}
+.accueil-info .tel .icons{
+    margin-left: 24px;
+}
+.icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border: 2px solid cyan;
+    border-radius: 50%;
+    font-size: 52px; 
+    color: white; 
+    text-decoration: none;
+    margin-right: 10px;
+    transition: 0.5s;
+    transition: .5s;
+}
+.icons a:hover {
+    background: cyan;
+    color: #1f242d;
+    box-shadow: 0 0 10px cyan;
+}
+.icons {
+    margin-right: 7%;
+    margin-top: 15%;
+    display: flex;
+    gap: 25px; /* espace entre les icônes */
+}
+/* image */
+.image .img-box {
+    margin-left: 15%;
+    width: 500px;        
+    height: 550px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 55px;
+}
+
+.image {
+ margin-left: 130px;
+    margin-top: 40px; 
+}
+
+.image .img-box img {
+    position: relative;
+    background: slateblue;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-top: -10%; 
+}
+
+
+/* formulaire */
+
+.contact {
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    padding-top: 100px;
+    height: 100vh;
+}
+
+
+
+/* Titre */
+.contact-container h1 {
+    margin-top: 23% ;
+text-align: center;
+margin-bottom: 20px;
+}
+
+/* discuter */
+.sortie {
+   
+display: flex;
+gap: 15px;
+margin-bottom: 15px;
+}
+
+.sortie input,
+textarea {
+     margin-left: 35px;
+     margin-top: 22px;
+width: 20%;
+padding: 12px;
+border: 2px solid cyan;
+border-radius: 8px;
+background: transparent;
+color: white;
+outline: none;
+}
+
+/* Message */
+textarea {
+    
+resize: none;
+margin-bottom: 15px;
+}
+
+/* Bouton */
+.bouton {
+width: 10%;
+padding: 12px;
+background: cyan;
+border: none;
+border-radius: 25px;
+font-weight: bold;
+cursor: pointer;
+transition: 0.5s;
+}
+
+.bouton {
+background: transparent;
+color: cyan;
+border: 2px solid cyan;
+}
+form {
+    margin-top: -1%;
+}
+.contact-texte {
+    margin-top: -7%;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.contact-texte{
+    
+    padding: 10px 30px;
+    background:cyan; 
+    border: 2px solid cyan;
+    border-radius: 40px;
+    box-shadow: 0 0 10px cyan;
+    color: #1f242d;
+    font-weight: 600;
+    transition: .5s;
+    width: 35%;
+
+}
+/* footer accueil*/
+
+.footer {
+    background: #2a2f3a;
+    color: white;
+    padding: 20px 9%;
+}
+
+
+.footer-accueil {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.footer-accueil1 p {
+    margin: 5px 0;
+    text-align: left;
+}
+
+.footer-accueil2 p {
+    margin: 5px 0;
+    text-align: right;
+}
+
+
+.footer-accueil3 {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+.footer {
+    color: white;
+    padding: 20px 9%;
+    animation: colorChange 8s infinite;
+    
+
+}
+
+/* Animation du footer */
+@keyframes colorChange {
+    0%   { background: cyan }
+    33%  { background: #00bcd4; }
+    66%  { background: #1f242d; }
+    100% { background: #0ef; }
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 29px;
+}
+
+.Merci {
+    text-align: center;
+    color: white;
+    font-size: 34px; 
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+
+/* footer contact */
+.footer-contact {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-contact1 p,
+.footer-contact2 p {
+    margin: 5px 0;
+}
+
+.footer-contact3 {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* le footer about*/
+
+.footer-about {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-about1 p,
+.footer-about2 p {
+    margin: 5px 0;
+}
+
+.footer-about3 {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/*footer projtes*/
+.footer-projets {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-projets1 p,
+.footer-projets2 p {
+    margin: 5px 0;
+}
+
+.footer-projets3 {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/*À propos*/
+
+.project-image {
+    display: flex;
+    justify-content: center; /* centre l’image */
+    margin-top: 60px;
+}
+
+.project-image img {
+    width: 300px; /* taille de l’image */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    transition: 0.3s;
+}
+
+/* effet au survol */
+.project-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px cyan;
+}
+/*  Présentation */
+.presentation {
+
+    margin-bottom: 40px;
+}
+
+.presentation h2 {
+    margin-left: 12%;
+    margin-top: 6%;
+    font-size: 40px;
+    color: cyan;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+}
+
+.presentation p {
+    margin-left: 5%;
+    font-size: 22px;
+    line-height: 1.6;
+    color: #eee;
+}
+.about-propos {
+    margin-top: 4%;
+    max-width: 800px;
+}
+
+.about-propos h1 {
+    margin-left: 35%;
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: cyan;
+}
+
+.about-propos p {
+    margin-top: 5%;
+    color: white;
+    margin-left: 55px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+
+/* Mon parcours */
+.parcours {
+    background: #1f242d;
+    color: white;
+    padding: 60px 9%;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+
+.about-pacours {
+    margin-top: -10%;
+    max-width: 1000px;
+}
+
+/* les  titres */
+.parcours h2 {
+    font-size: 28px;
+    color: cyan; 
+    margin-bottom: 5px;
+    
+    padding-bottom: 5px;
+}
+
+/* Sous-titres */
+.parcours h3 {
+    font-size: 22px;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Listes */
+.parcours ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #ccc;
+    font-size: 18px;
+}
+
+/* Paragraphes */
+.parcours p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #eee;
+    margin-bottom: 20px;
+}
+
+.parcours ul li {
+    font-size: 23px;
+    
+}
+
+/* competences personnelles*/
+.parcours h2 {
+    font-size: 28px;
+    color: cyan;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+}
+
+.parcours h3 {
+    font-size: 22px;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.parcours p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #eee;
+    margin-bottom: 20px;
+}
+
+/* Loisirs */
+.Loisirs {
+    margin-top: 50px;
+    padding-top: 20px;
+     margin-left: 5%;
+}
+
+.Loisirs h2 {
+   
+    margin-top: -5%;
+    font-size: 28px;
+    color: cyan;
+    margin-bottom: 15px;
+}
+
+.Loisirs ul {
+    list-style: disc;
+    margin-left: 20px;
+    color: #ccc;
+    font-size: 20px;
+}
+
+
+
+/*  centres d’intérêt */
+.intérêt {
+    margin-left: 85px;
+    margin-top: 50px;
+    padding-top: 20px;
+}
+
+.intérêt h2 {
+    margin-top: -1%;
+    font-size: 28px;
+    color: cyan;
+    margin-bottom: 15px;
+}
+
+.intérêt h3 {
+    font-size: 22px;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.intérêt p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #eee;
+    margin-bottom: 20px;
+}
+
+/*Bloc*/
+/* Introduction  */
+.contact-intro {
+    margin-top: 8%;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    margin-bottom: 20px; 
+    line-height: 1.6;
+}
+
+.contact-section p {
+    margin-right: 45%;
+    margin-top: 4%;
+    color: cyan;      
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+/*projets*/
+
+
+
+.project-video {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    padding-bottom: 55px;
+}
+.project-video video,
+.project-video  {
+    
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    
+}
+
+.video h2{
+    color: white;
+    margin-left: 45px;
+    margin-top: 6%;
+    font-size: 35px;
+    color: cyan;
+     position: relative;
+}
+.description-projet {
+    margin-left: 30px;
+    color: #ccc;          
+    font-size: 22px;
+    
+    margin-top: 1%;
+    margin-bottom: 20px;  
+    line-height: 1.6;     
+}
+/*langage C*/
+.langage-video {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    padding-bottom: 55px;
+    margin-left:55% ;
+}
+.langage-video video,
+.langage-video  {
+    
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    
+}
+
+.Langage-C h2{
+    color: white;
+    margin-left: 55%;
+    margin-top: -23%;
+    font-size: 35px;
+    color: cyan;
+     position: relative;
+}
+.langage {
+    margin-left: 55%;
+    color: #ccc;          
+    font-size: 22px;
+    
+    margin-top: 1%;
+    margin-bottom: 20px;  
+    line-height: 1.6;     
+}
+
+
+/*securite*/
+
+.sécurité {
+    margin-top: -40px;
+    text-align: center;
+}
+
+.sécurité h2 {
+    font-size: 45px;
+    position: relative;
+    margin-top: 90px;
+    color: cyan;
+    margin-bottom: 20px;
+    margin-left: 5%;
+}
+
+.sécurité-image {
+     position: relative; 
+        margin-top: 120px;
+    top: -30px;
+    display: flex;
+    justify-content: center; 
+    gap: 150px; 
+    flex-wrap: wrap; 
+}
+
+.sécurité-image img {
+    
+    width: 460px; 
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.sécurité-S {
+     margin-left: 5%;
+    color: #ccc;         
+    font-size: 22px;  
+    margin-top: 1%;
+    margin-bottom: 20px;  
+    line-height: 1.6;     
+}
+
+
+
+/* les modifications*/
+
+.project-form {
+    
+    margin-top: 40px;
+    padding: 30px;
+    background: #051C70;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,255,255,0.2);
+    width: 100%;
+    max-width: 700px;
+}
+
+.project-form h2 {
+    text-align: center;
+    color: cyan;
+    margin-bottom: 20px;
+}
+
+.project-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.project-form input,
+.project-form textarea {
+    padding: 12px;
+    border: 2px solid cyan;
+    border-radius: 8px;
+    background: transparent;
+    color: white;
+    outline: none;
+}
+/*  AGRANDIR CHAMPS  */
+.project-form input,
+.project-form textarea {
+    width: 90%;       
+    padding: 15px;      
+    font-size: 22px;    
+}
+.project-form textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+.project-form textarea {
+    width: 100% !important;
+    margin-left: -10px; 
+}
+.project-form textarea {
+    width: 380px;
+}
+.project-form textarea {
+    width: 100%;
+}
+
+/* Bouton */
+.project-form button {
+    width: 100%;        /* bouton large */
+    padding: 15px;
+    font-size: 22px;
+}
+
+.project-form textarea {
+    resize: none;
+}
+
+.project-form button {
+    padding: 12px;
+    background: cyan;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.project-form button:hover {
+    background: transparent;
+    color: cyan;
+    border: 2px solid cyan;
+}
+.project-form {
+    margin: 40px auto; /* centre horizontalement */
+}
+
+.project-form textarea {
+    width : 380px; /* augmente la hauteur */
+}
+
+.call-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* espace entre icône et numéro */
+}
+
+.call-icon a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border: 2px solid cyan;
+    border-radius: 50%;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.call-icon a:hover {
+    background: cyan;
+    color: #1f242d;
+    box-shadow: 0 0 10px cyan;
+}
+
+/* Numéro */
+.phone-number {
+    color: cyan;
+    font-size: 24px;
+    text-align: center;
+}
+
+/*cv*/
+
+/* Bouton téléchargement CV */
+.cv-download {
+    margin-top: 20px;
+}
+
+.cv-button {
+    display: inline-block;
+    background-color: cyan;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.cv-button i {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.cv-button:hover {
+    background-color: #e55b00;
+    transform: translateY(-2px);
+}
+
+body > form {
+    margin-left: 5%;
+    margin-top: 2%;
+    background:  #051C70;
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    max-width: 700px;
+}
+/* CHAMPS DU PREMIER FORMULAIRE  */
+body > form input,
+body > form textarea {
+    width: 90%;        
+    padding: 15px;      
+    font-size: 22px;    
+}
+
+/* Bouton envoyer */
+body > form .bouton {
+    width: 100%;       
+    padding: 15px;      
+    font-size: 22px;    
+}
+
+body > form .sortie input {
+    width: 100%;        
+    padding: 15px;      
+    font-size: 22px;    
+}
+
+body > form .bouton {
+    background: cyan;
+    color: #1f242d;
+    border: 2px solid cyan;
+}
+
+body > form .bouton:hover {
+    background: transparent;
+    color: cyan;
+}
+
+
+.contact-texte:hover {
+    background: transparent;
+    color: cyan;
+    box-shadow: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* =========================
+   RESPONSIVE MOBILE
+   ========================= */
+
+/* Tablette + petits écrans */
+@media screen and (max-width: 1024px) {
+
+   
+
+    .rechercher input {
+        width: 250px;
+    }
+
+    .accueil {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding-top: 120px;
+    }
+
+    .image {
+        margin-left: 0;
+    }
+
+    .image .img-box {
+        width: 300px;
+        height: 300px;
+        padding: 20px;
+    }
+
+    .accueil-info h1 {
+        font-size: 40px;
+    }
+
+    .accueil-info h2 {
+        font-size: 24px;
+    }
+
+    .accueil-info p {
+        font-size: 18px;
+    }
+}
+
+
+/* Téléphones (VERSION FUSIONNÉE + MENU HORIZONTAL) */
+@media screen and (max-width: 768px) {
+
+    
+        
+
+    .rechercher input {
+        width: 120px;
+        height: 30px;
+    }
+
+    .accueil {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 5% 0;
+    }
+
+    .accueil-info h1 {
+        font-size: 32px;
+    }
+
+    .accueil-info h2 {
+        font-size: 20px;
+    }
+
+    .accueil-info p {
+        font-size: 16px;
+    }
+
+    .tel-cv {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .icons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .image .img-box {
+        width: 250px;
+        height: 250px;
+    }
+
+    /* formulaire */
+    .sortie input,
+    textarea {
+        width: 90% !important;
+        margin-left: 0;
+    }
+
+    .bouton {
+        width: 90%;
+    }
+
+    /* vidéos */
+    .project-video video,
+    .langage-video video {
+        width: 100%;
+    }
+
+    .sécurité-image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/* Très petits téléphones */
+@media screen and (max-width: 480px) {
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .navbar ul li a {
+        font-size: 13px;
+    }
+
+    .accueil-info h1 {
+        font-size: 26px;
+    }
+
+    .accueil-info h2 {
+        font-size: 18px;
+    }
+
+    .accueil-info p {
+        font-size: 14px;
+    }
+
+    .tel-cv {
+        font-size: 14px;
+    }
+
+    .image .img-box {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
